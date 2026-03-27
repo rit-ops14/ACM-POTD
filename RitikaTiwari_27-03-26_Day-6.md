@@ -26,6 +26,23 @@ public:
     }
     
 };'''
+##code(C++)- cpp   OPTIMAL SOLUTION
+'''class Solution {
+public:
+    bool checkIfExist(vector<int>& arr) {
+        unordered_set<int>s;
+        for(int num:arr){
+            if(s.count(2*num)||(num%2==0&&s.count(num/2))){
+                return true;
+            }
+            s.insert(num);
+        }      
+        return false;
+    }
+    
+};'''
 
 ##Screenshot-
 <img width="1504" height="786" alt="image" src="https://github.com/user-attachments/assets/ffa3f980-1a88-4875-b90c-8638de14fbb9" />
+##OPTIMAL SOLUTION-
+<img width="696" height="786" alt="image" src="https://github.com/user-attachments/assets/7cfcec23-9d56-4c72-966d-3948f6f1541b" />
